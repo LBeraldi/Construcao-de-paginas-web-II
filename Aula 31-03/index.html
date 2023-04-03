@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    valorA: <input type="number" id="valorA">
+    valorB: <input type="number" id="valorB">
+    <button onclick="somar()">somar</button>
+    <h2>Resultado</h2>
+    <output id="resultado">resultado</output>
+</body>
+
+<script>
+   function somar(){
+   let valorA = document.getElementById("valorA");
+   let valorB = document.getElementById("valorB");
+   let resultado = document.getElementById("resultado");
+   
+   resultado.value = new Number (valorA.value) * new Number (valorB.value);
+   }
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <p>valor 1 <input type="number" id="valor1"></p>
+        <p>valor 2 <input type="number" id="valor2"></p>
+        <p>valor 3 <input type="number" id="valor3"></p>
+        <p>valor 4 <input type="number" id="valor4"></p>
+
+        <button onclick="somar()">Realizar media aritimetica</button> <br>
+        <output id="resultado"></output>
+    
+</body>
+<script>
+    function somar(){
+       // let valores = document.getElementById("valores");
+        let valor1 = new Number(document.getElementById("valor1").value);
+        let valor2 = new Number(document.getElementById("valor2").value);   
+        let valor3 = new Number(document.getElementById("valor3").value);     
+        let valor4 = new Number(document.getElementById("valor4").value); 
+
+        resultado.value = ((valor1 + valor2 + valor3 + valor4)/4);
+
+    }
+</script>
+</html>

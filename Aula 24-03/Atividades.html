@@ -9,11 +9,13 @@
 <body>
     <script>
          //atividade 01
+         console.log("atividade 01")
         let vet = [1,2,3,4,5,6,7,8,9,10]
 
             console.log(vet)
         
         //atividade 02
+        console.log("atividade 02")
         let vet2 = [1,2,3,4,5,6,7,8,9,10];
             vet2.reverse();
             
@@ -22,6 +24,7 @@
         }
         
         //atividade03
+        console.log("atividade 03")
         let vet3 = [1,2,3,4,5,6,7,8,9,10]
             let metade = Math.floor (vet3 / 2)
 
@@ -30,11 +33,11 @@
         }
 
         //atividade04
+        console.log("atividade 04")
         let mat = 
-        [[1,2,3],
-        [1,2,3],
-        [1,2,3],
-        [1,2,3]]
+        [[1,2,3,4],
+        [5,6,7,8],
+        [9,10,11,12]]
 
         for(let i = 0; i < mat.length ; i++){
             for(let j = 0; j < mat.length ; j++){
@@ -44,25 +47,23 @@
         }
 
         //atividade05
+        console.log("atividade 05")
+        
         let mat2 =[
             [1,2,3,4,5],
             [6,7,8,9,10],
             [11,12,13,14,15],
             [16,17,18,19,20],
             [21,22,23,24,25]
-        ];
+        ];console.table(mat2)
 
             for(let i = 0; i < mat2.length ; i++){
-                for(let j = 0; j < mat2[i].length ; j++){
-                if ( i === j){
-                    console.log(mat2 [i][j]);
-                }
 
+                    console.log(mat2 [i][i]);
                 }
-            }
-
 
         //atividade06
+        console.log("atividade 06")
         let mat3 = [
         [1,2,3,4,5],
         [6,7,8,9,10],
@@ -70,21 +71,14 @@
         [16,17,18,19,20],
         [21,22,23,24,25]
     ];
-      //  const n = mat3;
+    //console.table(mat3)
+      
+        let cont = 0;
 
-        for (let i = 5-1; i >= 0; i--) {
-        // const j = n - i - 1;
-          console.log(mat3[i][(5-1)-i]);
+       for(let i = mat3.length -1 ; i >= 0 ; i--){
+                console.log(mat3 [cont][i]); 
+                cont++;
         }
-
- /*       for(let i = 0; i < mat2.length ; i++){
-            for(let j = 0; j < mat2.lenght ; j++){
-               if ( i === j){
-                console.log(mat2 [i][j])
-               }
-
-            }
-        }*/
     </script>
 </body>
-</html>  
+</html>     
