@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvar</title>
+</head>
+<body>
+    <label for="Nome">Nome</label>
+    <input nome="nome" id="campoNome">
+    <br>
+    <label for="email">E-mail</label>
+    <input nome="email" id="campoEmail">
+    <br>
+    <button onclick="adicionar()">Salvar</button>
+
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+        </thead>    
+        <tbody id="corpoTabela">
+        </tbody>
+    </table>
+ 
+</body>
+    <script>
+        let contatos = new Array ();
+
+        function adicionar(){
+            let novoContato = {
+                nome: document.getElementById("campoNome").value,
+                email: document.getElementById("campoEmail").value
+            }
+            contatos.push(novoContato);
+            document.getElementById("campoNome").value = "";
+            document.getElementById("campoEmail").value = "";
+            carregarTabela();
+        }
+
+        function carregarTabela(){
+            let tabela = document.getElementById("corpoTabela");
+
+            tabela.innerHTML="";
+
+            for(let i = 0; i < contatos.length; i++){
+                let contato = contatos[i];
+                tabela.innerHTML +=
+                "<td>"+contato.nome+"</td>"+
+                "<td>"+contato.email+"</td>"+
+                "<td><button onclick='remover("+i+")'>Remover</button></td>"
+            }
+        }
+
+        function remover(index){
+            contatos.splice(index, 1);
+            carregarTabela();
+
+        }
+        //JSON JavaScript Object Notation
+    </script>
+</html>
