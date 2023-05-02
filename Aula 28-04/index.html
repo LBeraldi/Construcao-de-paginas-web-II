@@ -51,6 +51,7 @@
                 "<td>"+contato.nome+"</td>"+
                 "<td>"+contato.email+"</td>"+
                 "<td><button onclick='remover("+i+")'>Remover</button></td>"
+                "<td><button onclick='editar("+i+")'>Remover</button></td>"
             }
         }
 
@@ -58,6 +59,10 @@
             contatos.splice(index, 1);
             carregarTabela();
 
+        }
+
+        function editar(){
+            tabela.innerHTML +=
         }
         //JSON JavaScript Object Notation
     </script>
